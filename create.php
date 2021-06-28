@@ -1,9 +1,9 @@
 <?php
 $conn = mysqli_connect(
-    'localhost',
-    'SejunCheon',
-    '72339900',
-    'opentutorials');
+    't',
+    '',
+    '',
+    '');
 
 $sql = "SELECT * FROM topic";
 $result = mysqli_query($conn, $sql);
