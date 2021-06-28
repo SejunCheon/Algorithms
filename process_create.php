@@ -1,10 +1,10 @@
 <?php
 var_dump($_POST);
 $conn = mysqli_connect(
-    'localhost', 
-    'SejunCheon', 
-    '72339900',
-    'opentutorials');
+    '', 
+    '', 
+    '',
+    '');
 
 $filtered = array(
     'title'=>mysqli_real_escape_string($conn, $_POST['title']),
