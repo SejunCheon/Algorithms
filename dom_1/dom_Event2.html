@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Model2</title>
+    <script>
+        window.addEventListener('load', function () {
+            let form1 = document.querySelector('#form1');
+            form1.addEventListener('submit', function (event) {
+                event.preventDefault();
+            });
+
+            let naver = document.querySelector('a');
+            naver.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form action="#" id="form1">
+        <input type="text" name="sid">
+        <input type="submit">
+    </form>
+    <a href="https://www.naver.com">네이버</a>
+</body>
+
+</html>

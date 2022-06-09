@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('h1').style.backgroundColor = 'yellow';
+            document.querySelector('h2').style.backgroundColor = 'red';
+        });
+
+        // window.onload = () => {
+        //     let output = '';
+        //     for (let i = 0; i < 10; i++)
+        //         output += `<h1>Header - ${i} </h1>`;
+        //     document.body.innerHTML = output;
+
+        //     const headers = document.querySelectorAll('h1');
+        //     headers[5].style.color = 'red';
+        // }
+
+        window.addEventListener('load', () => {
+            let output = "";
+            for (let i = 0; i < 256; i++)
+                output+= "<div></div>";
+            document.body.innerHTML = output;
+            
+            let divs = document.querySelectorAll('div');
+            for(let i = 0; i < divs.length; i++){
+                divs[i].style.height = "2px";
+                divs[i].style.backgroundColor = `rgb(${i}, ${i}, ${i})`;
+            }
+        });
+    </script>
+    <script src="controlText.js"></script>
+</head>
+
+<body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+    <h1 id="id1">DOM Object</h1>
+    <img src="./bimo.jpg" width="25%" alt="" id="img1">
+    <p id="p2">Hello World!</p>
+    <h1 id="id2">My Heading</h1>
+    <script>
+        var elem = document.getElementById('id1');
+        elem.innerHTML = "Changing Object property";
+
+        document.getElementById('img1').src = 'space.jpg';
+
+        document.getElementById('p2').style.backgroundColor = 'blue';
+    </script>
+    <button type="button" onclick="document.getElementById('id2').style.backgroundColor = 'green'">클릭</button>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+    <style>
+        div {
+            font-size: 1.5em;
+            margin: 10px 0;
+            background-color: blue;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', appendElement);
+
+        function appendElement() {
+            let btn1 = document.querySelector(".btn1");
+            let btn2 = document.querySelector(".btn2");
+
+            btn1.addEventListener('click', () => {
+                let newDiv = document.createElement("div");
+                newDiv.innerHTML = "<b>새로 생성된 element</b>";
+                let body = document.querySelector("body");
+                body.appendChild(newDiv);
+            });
+
+            btn2.addEventListener('click', () => {
+                let body = document.querySelector("body");
+                body.removeChild(body.lastChild);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Element 생성, 삭제</h1>
+    <button class="btn1">Div 추가</button>
+    <button class="btn2">Div 삭제</button>
+</body>
+
+</html>

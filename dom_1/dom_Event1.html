@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Model</title>
+    <script>
+        // let displayImage = () => {
+        //     const images = document.querySelector('img');
+        //     const btn = document.querySelector('.btn');
+        //     images.src = 'bimo.jpg';
+        //     images.width = 400;
+        // };
+        // window.onload = () => {
+        //     const images = document.querySelector('img');
+        //     const btn = document.querySelector('.btn');
+
+        //     btn.onclick = displayImage;
+
+        //     function displayImage() {
+        //         images.src = 'bimo.jpg';
+        //         images.width = 200;
+        //         // images.setAttribute('src', 'bimo.jpg');
+        //         // images.setAttribute('width', '25%');
+        //     }
+        // }
+        window.addEventListener('load', displayOn);
+
+        function displayOn(){
+            const images = document.querySelector('img');
+            const btn = document.querySelector('.btn');
+            btn.addEventListener('click', () => {
+                images.src = 'space.jpg'
+                images.width = 200;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button onclick="displayImage()">클릭</button> -->
+    <button class="btn">클릭</button>
+    <hr>
+    <img>
+</body>
+
+</html>

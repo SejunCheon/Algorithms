@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Event3</title>
+    <script>
+        window.addEventListener('load', () => {
+            let btn = document.querySelector('button');
+            btn.addEventListener('click', () => {
+                let str = document.querySelector('input').value;
+                document.querySelector('.ans').innerHTML = `입력된 문자열은 << ${str }>> 입니다.`;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>input element</h1>
+    <input type="text" name="instr">
+    <button>클릭</button>
+    <p class="ans"></p>
+</body>
+</html>
