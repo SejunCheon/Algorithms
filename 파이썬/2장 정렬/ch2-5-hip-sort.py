@@ -1,7 +1,4 @@
 # 정렬할 배열
-from string import printable
-
-
 a = [5,2,7,3,6,1,4]
 
 def heapify(arr, idx, n):
