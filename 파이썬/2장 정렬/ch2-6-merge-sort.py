@@ -23,7 +23,7 @@ def merge_sort(arr):
     merge_arr += r_arr[r:]
     return merge_arr    
 
-# print(merge_sort(a))
+print(merge_sort(a))
             
 # def merge_sort2(arr, start, end):
     
